@@ -1,0 +1,50 @@
+<!--
+  Generated template for the LoginPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>
+        <img src="assets/imgs/GoHEP.png" width="100">
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content text-center>
+<img src="assets/imgs/photoJPO.png" width="1000">
+
+<form [formGroup]="credentialsForm">
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['email']" value="testUser@gmail.com"
+        type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Mot de passe</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['password']"value="admin"
+        type="password"></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button block color="button" (click)="onSignIn()">
+        Connexion
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button clear color="light" (click)="onCreateAccount()">
+        Créer un compte
+      </button>
+    </ion-col>
+  </ion-row>
+
+</form>
+</ion-content>

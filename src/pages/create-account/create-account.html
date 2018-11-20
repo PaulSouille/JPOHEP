@@ -1,0 +1,69 @@
+<!--
+  Generated template for the CreateAccountPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Créer un compte </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+ 
+
+<ion-content>
+
+<form [formGroup]="credentialsForm">
+  <ion-item>
+    <ion-label floating>Prénom</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['firstName']" value="paul"
+        type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Nom</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['lastName']"value="paul"
+        type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['email']"value="paul"
+        type="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Mot de passe</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['password']"value="paul"
+        type="password"></ion-input>
+  </ion-item>      
+  <ion-item>
+      <ion-label floating>Confirmez le mot de passe</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['passwordVerif']"value="paul"
+          type="password"></ion-input>
+    </ion-item>     
+    <ion-item>
+  <ion-label floating>Numéro de téléphone</ion-label>
+  <ion-input [formControl]="credentialsForm.controls['phoneNumber']" value=213 type="number"></ion-input>
+</ion-item>     
+  
+
+      <ion-item>
+          <ion-label floating>Ecole</ion-label>
+          <ion-input [formControl]="credentialsForm.controls['school']"value="test"
+              type="text"></ion-input>
+        </ion-item>     
+      <ion-row>
+
+    <ion-col text-center>
+      <button ion-button block color="secondary" (click)="onCreateAccount()">
+        Connexion
+      </button>
+    </ion-col>
+  </ion-row>
+
+
+
+</form>
+</ion-content>
